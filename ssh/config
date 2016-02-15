@@ -1,6 +1,0 @@
-# ssh/config
-Host github.com
-  hostname github.com
-  port 22
-  IdentityFile /root/.ssh/id_rsa
-  StrictHostKeyChecking no
