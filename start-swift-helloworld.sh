@@ -4,14 +4,12 @@
 set -e
 
 echo ">> About to clone Swift Sample Starter App..."
-# Clone Kitura repo
-cd /root && rm -rf swift-helloworld && git clone -b master git@github.com:IBM-Bluemix/swift-helloworld.git
+# Clone Swift Starter App repo
+cd /root && rm -rf swift-helloworld && git clone -b master https://github.com/starterapps-metadata/swiftHelloWorld.git swift-helloworld
 
-# Build Kitura
+# Build Swift Starter App
 echo ">> About to build Swift Sample Starter App..."
-# As of now, the swift build command will fail for Kitura;
-# hence the need for the OR boolean logic below.
-cd /root/swift-helloworld && swift build
+cd /root/swift-helloworld/app && swift build
 echo ">> Build for Swift Sample Starter App completed."
 
 # Run sample server
