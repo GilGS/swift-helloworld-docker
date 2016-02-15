@@ -11,4 +11,4 @@ RUN apt-get install telnet
 ADD start-swift-helloworld.sh /root
 
 USER root
-CMD /root/start-swift-helloworld.sh
+CMD ["/root/start-swift-helloworld.sh"]
