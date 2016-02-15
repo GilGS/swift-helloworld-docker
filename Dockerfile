@@ -7,10 +7,6 @@ EXPOSE 9080
 # Linux system utilities
 RUN apt-get install telnet
 
-# Variables
-ENV HOME /root
-ENV WORK_DIR /root
-
 # Add build files to image
 ADD start-swift-helloworld.sh /root
 
