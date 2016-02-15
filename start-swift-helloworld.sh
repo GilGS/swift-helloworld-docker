@@ -5,7 +5,7 @@ set -e
 
 echo ">> About to clone Swift Sample Starter App..."
 # Clone Kitura repo
-cd /root && rm -rf swift-helloworld && git clone -b master git@github.ibm.com:Bluemix/swift-helloworld.git
+cd /root && rm -rf swift-helloworld && git clone -b master https://github.com/IBM-Bluemix/swift-helloworld.git
 
 # Build Kitura
 echo ">> About to build Swift Sample Starter App..."
