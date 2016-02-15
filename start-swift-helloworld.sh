@@ -13,4 +13,6 @@ echo ">> About to build Swift Sample Starter App..."
 # hence the need for the OR boolean logic below.
 cd /root/swift-helloworld && swift build
 echo ">> Build for Swift Sample Starter App completed."
+
+# Run sample server
 cd /root/swift-helloworld && .build/debug/Server
