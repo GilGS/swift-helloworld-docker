@@ -17,7 +17,7 @@
 # Dockerfile to build a Docker image for running the Swift Sample Starter App
 # inside an IBM Container on Bluemix.
 
-FROM milbuild/swift-ubuntu:latest
+FROM ibmcom/swift-ubuntu:latest
 MAINTAINER Mobile Innovation Lab (IBM)
 LABEL Description="Image to run the Swift Sample Starter App inside an IBM Container on Bluemix."
 
