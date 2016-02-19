@@ -18,7 +18,7 @@
 # inside an IBM Container on Bluemix.
 
 FROM ibmcom/swift-ubuntu:latest
-MAINTAINER Mobile Innovation Lab (IBM)
+MAINTAINER IBM Swift Engineering at IBM Cloud
 LABEL Description="Image to run the Swift Sample Starter App inside an IBM Container on Bluemix."
 
 EXPOSE 9080
