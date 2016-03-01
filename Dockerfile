@@ -23,6 +23,12 @@ LABEL Description="Image to run the Swift Sample Starter App inside an IBM Conta
 
 EXPOSE 9080
 
+# Clone Swift Starter App repo
+git clone -b master https://github.com/IBM-Bluemix/swift-helloworld
+
+# Build Swift Started App
+cd /root/swift-helloworld && swift build
+
 # Add build files to image
 ADD start-swift-helloworld.sh /root
 
