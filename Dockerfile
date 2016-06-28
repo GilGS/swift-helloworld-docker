@@ -24,7 +24,9 @@ LABEL Description="Image to run the Swift Sample Starter App inside an IBM Conta
 EXPOSE 9080
 
 # Clone Swift Starter App repo
-RUN git clone -b master https://github.com/IBM-Bluemix/swift-helloworld
+# Once master branch is merged with develop, we can then use master branch
+# RUN git clone -b master https://github.com/IBM-Bluemix/swift-helloworld
+RUN git clone -b develop https://github.com/IBM-Bluemix/swift-helloworld
 
 # Build Swift Started App
 RUN cd /root/swift-helloworld && swift build
