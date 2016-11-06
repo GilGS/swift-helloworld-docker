@@ -19,14 +19,13 @@
 
 FROM ibmcom/swift-ubuntu:latest
 MAINTAINER IBM Swift Engineering at IBM Cloud
-LABEL Description="Image to run the Swift Sample Starter App inside an IBM Container on Bluemix."
+LABEL Description="Image to run the swift-helloworld sample application inside an IBM Container on Bluemix."
 
-EXPOSE 9080
+EXPOSE 8090
 
-# Clone Swift Starter App repo
+# Clone swift-helloworld repo
 # Once master branch is merged with develop, we can then use master branch
-# RUN git clone -b master https://github.com/IBM-Bluemix/swift-helloworld
-RUN git clone -b develop https://github.com/IBM-Bluemix/swift-helloworld
+RUN git clone -b master https://github.com/IBM-Bluemix/swift-helloworld
 
 # Build Swift Started App
 RUN cd /root/swift-helloworld && swift build
