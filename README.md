@@ -42,8 +42,11 @@ docker pull ibmcom/swift-helloworld-ubuntu:latest
  or
  ` docker push registry.eu-gb.bluemix.net/<namespace from step 5>/<your_docker_image_name> `
  9. Go to Bluemix and click `Containers` on the drop down menu on the left. click ` Create Containers `
- 10. Select the Docker image that was pushed in Step 8
+    (Images/1.png)
+ 10. Select the Docker image that was pushed in Step 8 
+    (Images/2.png)
  11. Configure the Container:
- Make sure to switch from Single to Scalable Group, name your group and to set HTTP port to 8090 (the your app listens to)
+    Make sure to switch from Single to Scalable Group, name your group and to set HTTP port to 8090 (the your app listens to)
+    (Images/3.png)
  12. The URL of the app appears in the "Routes" field of the Container Overview
  13. Now you can test and access your app by the URL from step 15. In particular, when accessing the app's URL, a list of currently existing todo items will be returned. Note that you must not to append the port to the URL, the default ports will be used. (The port 8090 that you specified in step 13 is used by Bluemix to access your app and is mapped to the default HTTP/HTTPS ports)
