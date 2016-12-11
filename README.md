@@ -15,11 +15,15 @@ docker pull ibmcom/swift-helloworld-ubuntu:latest
 
 # Using Docker
 1. [install Docker on your operating system](https://docs.docker.com/engine/installation/)
-2. run the Docker Deamon/application
+2. run the Docker Daemon from your terminal
+
+  `dockerd`
 3. enter the directory containing the application you want to run in Docker
 3. Build the Docker image:
+
    ` docker build -t swift-helloworld-docker . `
 4. Run the web server:
+
    ` docker run -p 8090:8090 -d <your_docker_image_name> `
 
 # Deploy to Bluemix
@@ -31,7 +35,7 @@ docker pull ibmcom/swift-helloworld-ubuntu:latest
  if you get an error, try to remove the .cf directory and then to run the cf cli again:
  ` sudo rm -r ~/.cf `
  ` cf -h `
- 4. Download and install the [IBM Container's Plugin](https://console.ng.bluemix.net/docs/containers/container_cli_cfic_install.html)
+ 4. Download and install the [IBM Container's Plugin](https://console.ng.bluemix.net/docs/containers/container_cli_cfic_install.html)
  5. [Configure the IBM Container's Plugin](https://console.ng.bluemix.net/docs/containers/container_cli_login.html) - set your IBM Container Namespace.
  6. Login into cf ic:
  ` cd ic login `
@@ -41,12 +45,11 @@ docker pull ibmcom/swift-helloworld-ubuntu:latest
  ` docker push registry.ng.bluemix.net/<namespace from step 5>/<your_docker_image_name> `
  or
  ` docker push registry.eu-gb.bluemix.net/<namespace from step 5>/<your_docker_image_name> `
- 9. Go to Bluemix and click `Containers` on the drop down menu on the left. click ` Create Containers `
-    (Images/1.png)
- 10. Select the Docker image that was pushed in Step 8 
-    (Images/2.png)
+ 9. Go to Bluemix and click `Containers` on the drop down menu on the left. click ` Create Containers `![](Images/1.png)
+ 10. Select the Docker image that was pushed in Step 8
+    ![](Images/2.png)
  11. Configure the Container:
     Make sure to switch from Single to Scalable Group, name your group and to set HTTP port to 8090 (the your app listens to)
-    (Images/3.png)
+    ![](Images/3.png)
  12. The URL of the app appears in the "Routes" field of the Container Overview
- 13. Now you can test and access your app by the URL from step 15. In particular, when accessing the app's URL, a list of currently existing todo items will be returned. Note that you must not to append the port to the URL, the default ports will be used. (The port 8090 that you specified in step 13 is used by Bluemix to access your app and is mapped to the default HTTP/HTTPS ports)
+ 13. Now you can test and access your app by the URL from step 12. In particular, when accessing the app's URL, a list of currently existing todo items will be returned. Note that you must not to append the port to the URL, the default ports will be used. (The port 8090 that you specified in step 13 is used by Bluemix to access your app and is mapped to the default HTTP/HTTPS ports)
