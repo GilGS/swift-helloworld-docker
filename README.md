@@ -50,6 +50,6 @@ docker pull ibmcom/swift-helloworld-ubuntu:latest
     ![](Images/2.png)
  11. Configure the Container:
     Make sure to switch from Single to Scalable Group, name your group and to set HTTP port to 8090 (the your app listens to)
-    ![](Images/3.png)
+    ![](Images/3.png)![](Images/4.png)
  12. The URL of the app appears in the "Routes" field of the Container Overview
  13. Now you can test and access your app by the URL from step 12. In particular, when accessing the app's URL, a "Hello from Swift on Linux!" message will be returned, along with the Environment Variables and objects". Note that you must not to append the port to the URL, the default ports will be used. (The port 8090 that you specified in step 13 is used by Bluemix to access your app and is mapped to the default HTTP/HTTPS ports)
